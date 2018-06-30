@@ -3,66 +3,66 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/Roboto_Black" />
+        android:font="@font/roboto_black" />
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/Roboto_BlackItalic" />
+        android:font="@font/roboto_blackitalic" />
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/Roboto_Bold" />
+        android:font="@font/roboto_bold" />
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/Roboto_BoldCondensed" />
+        android:font="@font/roboto_boldcondensed" />
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/Roboto_BoldCondensedItalic" />
+        android:font="@font/roboto_boldcondenseditalic" />
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/Roboto_BoldItalic" />
+        android:font="@font/roboto_bolditalic" />
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/Roboto_Condensed" />
+        android:font="@font/roboto_condensed" />
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/Roboto_CondensedItalic" />
+        android:font="@font/roboto_condenseditalic" />
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/Roboto_Italic" />
+        android:font="@font/roboto_italic" />
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/Roboto_Light" />
+        android:font="@font/roboto_light" />
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/Roboto_LightItalic" />
+        android:font="@font/roboto_lightitalic" />
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/Roboto_Medium" />
+        android:font="@font/roboto_medium" />
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/Roboto_MediumItalic" />
+        android:font="@font/roboto_mediumitalic" />
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/Roboto_Regular" />
+        android:font="@font/roboto_regular" />
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/Roboto_Thin" />
+        android:font="@font/roboto_thin" />
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/Roboto_ThinItalic" />
+        android:font="@font/roboto_thinitalic" />
 
 </font-family>
