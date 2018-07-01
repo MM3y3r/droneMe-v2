@@ -20,7 +20,7 @@
         android:layout_gravity="center"
         android:text="Home"
         android:textAlignment="center"
-        android:textColor="#ffffff"
+        android:textColor="@color/colorLightBlue"
         android:id="@+id/mytext"
         android:textSize="18sp" />
 
