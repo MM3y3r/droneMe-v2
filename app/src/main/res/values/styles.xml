@@ -9,6 +9,7 @@
         <!--<item name="windowNoTitle">true</item>-->
         <item name="android:windowFullscreen">true</item>
         <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">#ffffffff</item>
     </style>
 
     <style name="AppThemeLaunch" parent="Theme.AppCompat.Light.NoActionBar">
