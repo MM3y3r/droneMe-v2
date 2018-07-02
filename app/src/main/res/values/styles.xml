@@ -9,9 +9,6 @@
         <!--<item name="windowNoTitle">true</item>-->
         <item name="android:windowFullscreen">true</item>
         <item name="android:fontFamily">@font/roboto</item>
-
-
-
     </style>
 
     <style name="AppThemeLaunch" parent="Theme.AppCompat.Light.NoActionBar">
@@ -19,6 +16,5 @@
         <item name="android:windowBackground">@drawable/splashscreen</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:fontFamily">@font/roboto</item>
-
     </style>
 </resources>
