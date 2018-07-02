@@ -8,6 +8,9 @@
     <string name="title_activity_maps">Map</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Transport_fragment">Start a Transport!</string>
     <string name="home_fragment">Your are at home!</string>
+    <string name="nav_fragment">Start navigating!</string>
+    <string name="settings_fragment">Settings!</string>
+    <string name="photo_fragment">Take photos here!</string>
 </resources>
