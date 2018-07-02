@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 
+import static com.example.maximus.droneme.R.layout.activity_splash;
+
 public class SplashActivity extends Activity {
     private static final long SPLASH_DURATION = 2500L;
 
@@ -19,7 +21,7 @@ public class SplashActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(activity_splash);
 
         mHandler = new Handler();
         mRunnable = new Runnable() {
