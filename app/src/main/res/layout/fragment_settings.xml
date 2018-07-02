@@ -8,14 +8,12 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Setting1" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+<<<<<<< HEAD
 
     <ImageView
         android:layout_width="wrap_content"
@@ -28,6 +26,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Switch1" />
+=======
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Location Services" />
+
+    </LinearLayout>
+>>>>>>> 700f2b34de2691ec7e062ea6947c2868c31e2f61
 
 
 </FrameLayout>
