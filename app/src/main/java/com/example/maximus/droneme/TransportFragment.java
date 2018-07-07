@@ -1,12 +1,17 @@
 package com.example.maximus.droneme;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 
 /**
@@ -17,11 +22,20 @@ import android.view.ViewGroup;
  * Use the {@link TransportFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class TransportFragment extends Fragment {
+public class TransportFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    private Button getButton;
+    private Button pickButton;
+    private Button infoButton;
+    private ImageView imgView;
+    private ImageView imgView2;
+    private ImageView confirmView;
+    private Button confirmButton;
+    private TextView fetchText;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -54,17 +68,72 @@ public class TransportFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_transport, container, false);
+        View view = inflater.inflate(R.layout.fragment_transport, container, false);
+        imgView = view.findViewById(R.id.imView);
+        imgView2 = view.findViewById(R.id.imageView2);
+        confirmView = view.findViewById(R.id.imageView3);
+        fetchText = view.findViewById(R.id.textView);
+        imgView2.setVisibility(View.INVISIBLE);
+        confirmView.setVisibility(View.INVISIBLE);
+        fetchText.setVisibility(View.INVISIBLE);
+
+        getButton = view.findViewById(R.id.button);
+        getButton.setOnClickListener(this);
+
+        pickButton = view.findViewById(R.id.button2);
+        pickButton.setOnClickListener(this);
+
+        infoButton = view.findViewById(R.id.button3);
+        infoButton.setOnClickListener(this);
+
+        confirmButton = view.findViewById(R.id.button4);
+        confirmButton.setOnClickListener(this);
+        confirmButton.setVisibility(View.INVISIBLE);
+
+        return view;
+    }
+
+    public void onClick(View v){
+        switch (v.getId()) {
+            case R.id.button:
+                imgView2.setVisibility(View.VISIBLE);
+                confirmView.setVisibility(View.VISIBLE);
+                confirmButton.setVisibility(View.VISIBLE);
+                getButton.setVisibility(v.INVISIBLE);
+                pickButton.setVisibility(v.INVISIBLE);
+                infoButton.setVisibility(v.INVISIBLE);
+                break;
+            case R.id.button2:
+                confirmView.setVisibility(View.VISIBLE);
+                confirmButton.setVisibility(View.VISIBLE);
+                getButton.setVisibility(v.INVISIBLE);
+                pickButton.setVisibility(v.INVISIBLE);
+                infoButton.setVisibility(v.INVISIBLE);
+                break;
+            case R.id.button3:
+                getButton.setVisibility(v.INVISIBLE);
+                pickButton.setVisibility(v.INVISIBLE);
+                infoButton.setVisibility(v.INVISIBLE);
+                break;
+            case R.id.button4:
+                //imgView4.setVisibility(v.VISIBLE);
+                getButton.setVisibility(v.INVISIBLE);
+                pickButton.setVisibility(v.INVISIBLE);
+                infoButton.setVisibility(v.INVISIBLE);
+                break;
+        }
     }
 
     // TODO: Rename method, update argument and hook method into UI event
