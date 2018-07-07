@@ -33,9 +33,12 @@ public class TransportFragment extends Fragment implements View.OnClickListener 
     private Button infoButton;
     private ImageView imgView;
     private ImageView imgView2;
-    private ImageView confirmView;
+    private ImageView bringView;
+    private ImageView pickView;
+    private ImageView infoView;
+    //private ImageView confirmView;
     private Button confirmButton;
-    private TextView fetchText;
+   // private TextView fetchText;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -83,11 +86,13 @@ public class TransportFragment extends Fragment implements View.OnClickListener 
         View view = inflater.inflate(R.layout.fragment_transport, container, false);
         imgView = view.findViewById(R.id.imView);
         imgView2 = view.findViewById(R.id.imageView2);
-        confirmView = view.findViewById(R.id.imageView3);
-        fetchText = view.findViewById(R.id.textView);
+        bringView = view.findViewById(R.id.imageView3);
+        pickView = view.findViewById(R.id.imageView4);
+        infoView = view.findViewById(R.id.imageView5);
         imgView2.setVisibility(View.INVISIBLE);
-        confirmView.setVisibility(View.INVISIBLE);
-        fetchText.setVisibility(View.INVISIBLE);
+        bringView.setVisibility(View.INVISIBLE);
+        pickView.setVisibility(View.INVISIBLE);
+        infoView.setVisibility(View.INVISIBLE);
 
         getButton = view.findViewById(R.id.button);
         getButton.setOnClickListener(this);
@@ -109,26 +114,26 @@ public class TransportFragment extends Fragment implements View.OnClickListener 
         switch (v.getId()) {
             case R.id.button:
                 imgView2.setVisibility(View.VISIBLE);
-                confirmView.setVisibility(View.VISIBLE);
                 confirmButton.setVisibility(View.VISIBLE);
                 getButton.setVisibility(v.INVISIBLE);
                 pickButton.setVisibility(v.INVISIBLE);
                 infoButton.setVisibility(v.INVISIBLE);
                 break;
             case R.id.button2:
-                confirmView.setVisibility(View.VISIBLE);
-                confirmButton.setVisibility(View.VISIBLE);
+                pickView.setVisibility(View.VISIBLE);
                 getButton.setVisibility(v.INVISIBLE);
                 pickButton.setVisibility(v.INVISIBLE);
                 infoButton.setVisibility(v.INVISIBLE);
                 break;
             case R.id.button3:
+                infoView.setVisibility((View.VISIBLE));
                 getButton.setVisibility(v.INVISIBLE);
                 pickButton.setVisibility(v.INVISIBLE);
                 infoButton.setVisibility(v.INVISIBLE);
                 break;
             case R.id.button4:
                 //imgView4.setVisibility(v.VISIBLE);
+                bringView.setVisibility(View.VISIBLE);
                 getButton.setVisibility(v.INVISIBLE);
                 pickButton.setVisibility(v.INVISIBLE);
                 infoButton.setVisibility(v.INVISIBLE);

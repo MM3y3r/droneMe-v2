@@ -8,22 +8,34 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+
+    <ImageView
+        android:id="@+id/imageHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="-20dp"
+        android:src="@drawable/home" />
+
+    <ImageView
+        android:id="@+id/imageViewMessage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="-20dp"
+        android:src="@drawable/message_screen" />
+
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:paddingBottom="30dp" >
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="-20dp"
-                android:src="@drawable/home" />
 
             <TextView
                 android:layout_width="match_parent"

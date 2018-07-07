@@ -13,38 +13,48 @@
     <ImageView
         android:id="@+id/imView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_centerInParent="true"
+        android:layout_marginTop="-20dp"
         android:layout_weight="1"
         android:src="@drawable/transport" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="340dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="225dp"
-        android:layout_marginLeft="10dp"
-        android:src="@drawable/bring_screen_fields" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-20dp"
+        android:layout_centerInParent="true"
+        android:layout_weight="1"
+        android:src="@drawable/bring_screen" />
+
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="85dp"
-        android:layout_marginTop="400dp"
-        android:src="@drawable/confirm_button" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-20dp"
+        android:layout_centerInParent="true"
+        android:layout_weight="1"
+        android:src="@drawable/fetch_screen" />
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-20dp"
+        android:layout_centerInParent="true"
+        android:layout_weight="1"
+        android:src="@drawable/pickup_screen" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_marginLeft="85dp"
-        android:text="Great! I'll fetch it for you!"
-        android:textColor="#252424"
-        android:background="#c2dadada"
-        android:textSize="8pt"/>
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-20dp"
+        android:layout_centerInParent="true"
+        android:layout_weight="1"
+        android:src="@drawable/info_screen" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -57,7 +67,7 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="160dp"
             android:text=""
             android:alpha="0.01"/>
 
@@ -73,16 +83,16 @@
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:text=""
             android:alpha="0.01"/>
 
         <Button
             android:id="@+id/button4"
-            android:layout_width="200dp"
+            android:layout_width="240dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="45dp"
+            android:layout_marginTop="115dp"
+            android:layout_marginLeft="50dp"
             android:text=""
             android:alpha="0.01"/>
 

@@ -14,6 +14,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements SettingsFragment.OnFragmentInteractionListener, TransportFragment.OnFragmentInteractionListener, PhotoFragment.OnFragmentInteractionListener, HomeFragment.OnFragmentInteractionListener, NavigationFragment.OnFragmentInteractionListener {
