@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -18,15 +19,18 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements SettingsFragment.OnFragmentInteractionListener, TransportFragment.OnFragmentInteractionListener, PhotoFragment.OnFragmentInteractionListener, HomeFragment.OnFragmentInteractionListener, NavigationFragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements SettingsFragment.OnFragmentInteractionListener, TransportFragment.OnFragmentInteractionListener, PhotoFragment.OnFragmentInteractionListener, HomeFragment.OnFragmentInteractionListener, NavigationFragment.OnFragmentInteractionListener, MessageFragment.OnFragmentInteractionListener, View.OnClickListener {
 
     Fragment transportFragment = new TransportFragment();
     Fragment homeFragment = new HomeFragment();
     Fragment navigationFragment = new NavigationFragment();
     Fragment photoFragment = new PhotoFragment();
     Fragment settingsFragment = new SettingsFragment();
+    Fragment messageFragment = new MessageFragment();
 
     private TextView mTextMessage;
+    private ImageButton messageButton;
+    private ImageButton naviButton;
 
     //Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -55,6 +59,17 @@ public class MainActivity extends AppCompatActivity implements SettingsFragment.
         }
     };
 
+    public void onClick(View view){
+        switch(view.getId()){
+            case(R.id.toolbar_button):
+                replaceFragment(navigationFragment);
+                break;
+            case(R.id.toolbar_button2):
+                replaceFragment(messageFragment);
+                break;
+        }
+    }
+
     @Override
     public void onFragmentInteraction(Uri uri) {
         //
@@ -75,6 +90,12 @@ public class MainActivity extends AppCompatActivity implements SettingsFragment.
         actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         actionBar.setCustomView(R.layout.top_nav_layout);
 
+        naviButton = findViewById(R.id.toolbar_button);
+        naviButton.setOnClickListener(this);
+
+        messageButton = findViewById(R.id.toolbar_button2);
+        messageButton.setOnClickListener(this);
+
         // initialize fragment view
         if (getSupportFragmentManager().findFragmentByTag("home_fragment_tag") == null) {
             System.out.println("Entered if");
@@ -93,5 +114,12 @@ public class MainActivity extends AppCompatActivity implements SettingsFragment.
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.getMenu().getItem(2).setChecked(true);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
     }
 }
