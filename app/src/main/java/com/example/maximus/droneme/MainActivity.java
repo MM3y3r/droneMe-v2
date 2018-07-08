@@ -27,10 +27,13 @@ public class MainActivity extends AppCompatActivity implements SettingsFragment.
     Fragment photoFragment = new PhotoFragment();
     Fragment settingsFragment = new SettingsFragment();
     Fragment messageFragment = new MessageFragment();
+    public static ActionBar actionBar;
+    private String currentFrag = "";
 
     private TextView mTextMessage;
     private ImageButton messageButton;
     private ImageButton naviButton;
+    private TextView txtV;
 
     //Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -41,20 +44,31 @@ public class MainActivity extends AppCompatActivity implements SettingsFragment.
             switch (item.getItemId()) {
                 case R.id.navigation_photo:
                     replaceFragment(photoFragment);
+                    currentFrag = "Camera";
+                    txtV.setText("Camera");
                     return true;
                 case R.id.navigation_package:
                     replaceFragment(transportFragment);
+                    currentFrag = "Transport";
+                    txtV.setText("Transport");
                     return true;
                 case R.id.navigation_home:
                     replaceFragment(homeFragment);
+                    currentFrag = "Home";
+                    txtV.setText("Home");
                     return true;
                 case R.id.navigation_navigation:
                     replaceFragment(navigationFragment);
+                    currentFrag = "Navigation";
+                    txtV.setText("Navigation");
                     return true;
                 case R.id.navigation_settings:
                     replaceFragment(settingsFragment);
+                    currentFrag = "Settings";
+                    txtV.setText("Settings");
                     return true;
             }
+            getSupportActionBar().setTitle(currentFrag);
             return false;
         }
     };
@@ -70,6 +84,13 @@ public class MainActivity extends AppCompatActivity implements SettingsFragment.
         }
     }
 
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
     @Override
     public void onFragmentInteraction(Uri uri) {
         //
@@ -83,8 +104,7 @@ public class MainActivity extends AppCompatActivity implements SettingsFragment.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ActionBar actionBar = getSupportActionBar();
-        setTitle("Home");
+        actionBar = getSupportActionBar();
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setIcon(R.drawable.ic_navigation);
         actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
@@ -95,6 +115,7 @@ public class MainActivity extends AppCompatActivity implements SettingsFragment.
 
         messageButton = findViewById(R.id.toolbar_button2);
         messageButton.setOnClickListener(this);
+        txtV = findViewById(R.id.mytext);
 
         // initialize fragment view
         if (getSupportFragmentManager().findFragmentByTag("home_fragment_tag") == null) {

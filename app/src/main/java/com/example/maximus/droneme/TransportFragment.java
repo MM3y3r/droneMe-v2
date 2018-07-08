@@ -1,5 +1,6 @@
 package com.example.maximus.droneme;
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.net.Uri;
@@ -76,7 +77,6 @@ public class TransportFragment extends Fragment implements View.OnClickListener 
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
 
     }
 
